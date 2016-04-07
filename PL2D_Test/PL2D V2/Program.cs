@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace PL2D_Test
+namespace safeprojectname
 {
-#if WINDOWS || LINUX
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +17,4 @@ namespace PL2D_Test
                 game.Run();
         }
     }
-#endif
 }

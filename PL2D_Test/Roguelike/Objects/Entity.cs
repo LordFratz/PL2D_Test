@@ -44,7 +44,7 @@ namespace Roguelike
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            Game1.drawTexture(spriteBatch, Sprite, map.GetCell(X, Y), renderLayer.spriteLayer);
+            RogueGame1.drawTexture(spriteBatch, Sprite, map.GetCell(X, Y), renderLayer.spriteLayer);
         }
 
 #pragma warning disable

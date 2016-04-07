@@ -1,8 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using safeprojectname.Exceptions;
 
-namespace PL2D_Test
+namespace safeprojectname
 {
     /// <summary>
     /// This is the main type for your game.
@@ -28,6 +30,11 @@ namespace PL2D_Test
         {
             // TODO: Add your initialization logic here
 
+            // TODO: Initialize camera child here
+            //Render.camera = new ___
+            Render.camera = new Camera();
+            if (Render.camera == null)
+                throw new CameraNotImplementedException("Please initialize the camera before starting the game");
             base.Initialize();
         }
 
@@ -40,7 +47,7 @@ namespace PL2D_Test
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            Assets.importContent(this);
         }
 
         /// <summary>
@@ -59,11 +66,11 @@ namespace PL2D_Test
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            //Exit();
 
             // TODO: Add your update logic here
-
+            GameLoopFunctions.Update();
             base.Update(gameTime);
         }
 
@@ -76,7 +83,9 @@ namespace PL2D_Test
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, null, null, null, null, Render.camera.TranslationMatrix);
+            GameLoopFunctions.Render(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

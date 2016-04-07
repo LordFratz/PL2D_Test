@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PL2D_Test")]
-[assembly: AssemblyProduct("PL2D_Test")]
+[assembly: AssemblyTitle("$safeprojectname$")]
+[assembly: AssemblyProduct("$safeprojectname$")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("801e5b47-9bc8-4428-bfa8-82a1e471d6da")]
+[assembly: Guid("e879d57f-74df-47fa-92c5-9f523176af97")]
 
 // Version information for an assembly consists of the following four values:
 //

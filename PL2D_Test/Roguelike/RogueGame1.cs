@@ -11,7 +11,7 @@ namespace Roguelike
     /// This is the main type for your game.
     /// </summary>
     /// <seealso cref="Microsoft.Xna.Framework.Game" />
-    public class Game1 : Game
+    public class RogueGame1 : Game
     {
         readonly GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -20,7 +20,7 @@ namespace Roguelike
         readonly Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
         readonly Entity[] entities = new Entity[2];
 
-        public Game1()
+        public RogueGame1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

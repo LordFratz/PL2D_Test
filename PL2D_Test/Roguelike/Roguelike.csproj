@@ -42,7 +42,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game1.cs" />
+    <Compile Include="RogueGame1.cs" />
     <Compile Include="Objects\AggressiveEnemy.cs" />
     <Compile Include="Objects\Camera.cs" />
     <Compile Include="Objects\Entity.cs" />

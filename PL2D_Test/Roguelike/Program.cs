@@ -14,7 +14,7 @@ namespace Roguelike
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new RogueGame1())
                 game.Run();
         }
     }
